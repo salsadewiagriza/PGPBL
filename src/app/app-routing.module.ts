@@ -5,7 +5,30 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./splashcreen/splashcreen.module').then( m => m.SplashcreenPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'maps',
+    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
+  },
+  {
+    path: 'createpoint',
+    loadChildren: () => import('./createpoint/createpoint.module').then( m => m.CreatepointPageModule)
   }
+
+
+
+
 ];
 @NgModule({
   imports: [
